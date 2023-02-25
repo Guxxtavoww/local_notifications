@@ -3,7 +3,19 @@
     "name": "local_notifications",
     "plugins": [
       "@notifee/react-native",
-      "expo-build-properties"
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "tarhetSdkVersion": 33,
+            "buildToolsVersion": "33.0.0"
+          },
+          "ios": {
+            "deploymentTarget": "13.0"
+          }
+        }
+      ]
     ],
     "slug": "local_notifications",
     "version": "1.0.0",
@@ -28,7 +40,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.anonymous.local_notifications"
     },
     "web": {
       "favicon": "./assets/favicon.png"
